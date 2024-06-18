@@ -21,7 +21,7 @@ async def cmd_info(message: types.Message):
 
 @router.message(F.text == "🎓 Направления обучения 🎓")
 async def cmd_napr(message: types.Message):
-    await message.answer("КАИ пуп земли!", reply_markup=kb.napravl_oboch)
+    await message.answer("КАИ - пуп земли!", reply_markup=kb.napravl_oboch)
 
 
 @router.message(F.text == "🕺 Студенческая жизнь 🕺")
@@ -31,5 +31,5 @@ async def cmd_stud(message: types.Message):
 
 @router.message(F.text == "🕺 Обратная связь 🕺")
 async def answer(message: types.Message, state: FSMContext):
-    await message.answer('Напишите СМС')
+    await message.answer('Напишите ваше обращение в поддержку')
     await state.set_state(SendFeedbackState.step1)
